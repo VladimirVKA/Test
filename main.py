@@ -1,8 +1,7 @@
 # создать класс, два поля интренал, прайвeд и проперти к прайвд
 # залить на репозиторий
 class gg:
-    __name: str
-    _surname:str
+
     def __init__(self):
         self.__name = ''
         self._surname = ''
@@ -18,10 +17,14 @@ class gg:
     @property
     def getsurname(self):
         return self._surname
-    def gersurname(self, sername = 'Ivanov'):
-        self._surname = sername
+
+    @getsurname.setter
+    def getsurname(self, surname = 'Ivanov'):
+        self._surname = surname
 
 if __name__ == '__main__':
     x = gg()
-
-
+    x.getname = 'Misha'
+    x.getsurname = 'Mihailov'
+    print(x.getname)
+    print(x.getsurname)
